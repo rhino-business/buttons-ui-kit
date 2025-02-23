@@ -1,0 +1,193 @@
+        .block_content {
+          display: grid;
+          border: 0.03rem solid transparent;
+        }
+        .wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          background: transparent;
+          border: 0.03rem solid transparent;
+          margin-left: 9rem;
+          margin-right: 9rem;
+          padding: 1rem;
+          place-items: center;
+          height: auto;
+        }
+        .touch {
+          display: grid;
+          border: 0.03rem solid transparent;
+          height: 20rem;
+          width: 20rem;
+        }
+        #button_one {
+            background: #FFFFFF;
+        }
+        #button_two {
+            position: relative;
+            background: #FFFFFF;
+        }
+        #button_two::before {
+           display: grid;
+           position: absolute;
+           content: "";
+           border-left: 0.2rem solid #583E27;
+           border-radius: 0 10rem 10rem 0;
+           background: #FFFFFF;
+           width: 18rem;
+           height: 20rem;
+           transform: rotate(15deg);
+           margin-left: 2rem;
+           margin-top: 2rem;
+        }
+        #button_three {
+            position: relative;
+            background: #FFFFFF;
+        }
+        #button_three::before {
+           display: grid;
+           position: absolute;
+           content: "";
+           border-right: 0.2rem solid #583E27;
+           border-radius: 10rem 0 0 10rem;
+           width: 18rem;
+           height: 21rem;
+           background: #FFFFFF;
+           margin-top: -3.7rem;
+           transform: rotate(22deg);
+       }  
+        #button_four {
+            background: #FFFFFF;
+        }
+        #push_1, #push_2, #push_3, #push_4 {
+           display: grid;
+           border: 0.02rem solid transparent;
+           place-items: center;
+           z-index: 20;
+           background: transparent;
+        }
+        .button_element {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none; 
+          z-index: 30;
+          font-size: 1.3rem;
+          letter-spacing: 0.3rem;
+          width: 12rem;
+          height: 4rem;
+          text-align: center;
+          outline: 0.06rem solid transparent;
+          cursor: pointer;
+          font-family: "Bangers"; 
+        }
+        #buy_button {
+          background: #F8F8F8;  
+          color: #66E275;
+          border: 0.2rem solid #66E275;   
+          border-radius: 0.4rem;
+          box-shadow: 0.3rem 0.3rem 0.1rem #66E275, inset 0.2rem 0.1rem 0.5rem rgba(255, 255, 255, 10), 0.4rem 0.5rem 0.1rem 0.1rem rgba(45, 357, 45, 10);
+        }
+        #buy_button:hover {
+            color: rgba(155, 455, 155, 10);
+            box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(155, 455, 155, 10);
+        }
+        #send_button {
+          background: #DBDBCA;  
+          color: #C01B78;
+          border: 0.2rem solid #C01B78;   
+          border-radius: 3rem;
+          box-shadow: 0.3rem 0.3rem 0.1rem #C01B78, inset 0rem 0.1rem 0.5rem rgba(255, 255, 255, 10);
+        }
+        #send_button:hover {
+          opacity: 0.67;
+          border-radius: 1.5rem;
+          color: #8C8971;                                     
+        }
+        #explore_button::before {
+                display: grid;
+                position: absolute;
+                content: "";
+                border-bottom: 0.2rem solid #DBDBCA;
+                border-top: 0.2rem solid transparent;
+                border-right: 0.2rem solid #DBDBCA;
+                border-left: 0.2rem solid transparent;
+                width: 1rem;
+                height: 1rem;
+                top: 0;
+                left: 0;
+                margin-left: -1.35rem;
+                margin-top: -1.35rem;
+        }
+        #explore_button {
+          position: relative;
+          background: #F8F8F8;  
+          color: #8C8971;
+          border: 0.2rem solid #DBDBCA;   
+          border-radius: 0rem 0rem 0.4rem 0.4rem;
+          box-shadow: 0.3rem 0.3rem 0.1rem #DBDBCA, inset 0rem 0.1rem 0.5rem rgba(255, 255, 255, 10);
+        }
+        #explore_button:hover {
+           color: #DBDBCA;                                      
+        }
+        #love_button {
+          background: rgba(140, 0, 187, 0.6); 
+          color: #F8F8F8;
+          border: 0.2rem solid #F8F8F8;   
+          border-radius: 1rem;
+          box-shadow: 0 0 2rem 0.1rem inset #F8F8F8, 0 2rem 2rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.22);
+        }
+        #love_button:hover {
+           box-shadow: none; 
+           border: 0.2rem solid transparent; 
+        }
+        @font-face {
+                    font-family: "Bangers"; 
+                    src: url("../fonts/FeVQS0BTqb0h60ACH55Q2A.woff2") format("woff2");  
+                    font-style: normal; 
+                    font-weight: normal; 
+                    font-display: block;
+        }
+       
+        @media(min-width: 1500px) {
+                    .block_content {
+                        width: 1400px;
+                        place-self: center;
+                    }
+        }
+        @media(max-width: 1000px) {
+            .wrapper {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }  
+        }
+        @media(max-width: 790px) {
+            .wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-left: 0.2rem;
+                margin-right: 0.2rem;
+            }
+            #button_two:before, #button_three:before {
+                display: none; 
+            }
+            .touch {
+                height: 12rem;
+            }
+        }
+        @media(max-width: 500px) {
+            .touch {
+                width: 17rem;
+            }
+        }
+        @media(max-width: 400px) {
+            .touch {
+                width: 14.5rem;
+            }
+            .wrapper {
+                padding: 0.5rem;
+            }
+        }
+        @media(max-width: 279px) {
+            .block_content {
+                display: none;
+            }
+        }
